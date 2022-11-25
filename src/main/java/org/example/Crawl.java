@@ -1,6 +1,5 @@
 package org.example;
 
-import org.example.Secrets.*;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -8,14 +7,13 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import java.util.List;
 
+import static org.example.Secrets.WEB_DRIVER_ID;
+import static org.example.Secrets.WEB_DRIVER_PATH;
+import static org.example.Secrets.ID;
+import static org.example.Secrets.PWD;
+
 public class Crawl {
-    public static final String WEB_DRIVER_ID = "webdriver.chrome.driver";
-    public static final String WEB_DRIVER_PATH = "src/main/resources/chromedriver.exe";
     public static final int SCROLL_TIME_OUT = 10;
-
-    public static final String ID = LoginInfo.ID;
-
-    public static final String PWD = LoginInfo.PWD;
 
     public void get(){
         //해당 브라우저에 다양한 옵션을 주기위해 ChromeOptions 객체화
